@@ -5,7 +5,7 @@ class Jumper:
     def __init__(self):
 
         self.word = "perro"
-        self.spaces = "_" * len(self.word) # We well have the same underscores "_"than characters in the word
+        self.spaces = ["_"] * len(self.word) # We well have the same underscores "_"than characters in the word
         self.jumper = ["""
    x   
   /|\  
