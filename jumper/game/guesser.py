@@ -8,6 +8,10 @@ class Guesser:
             attempts(number): How much attemps has the guesser.
         """
         self.attempts = 4
+        self.guess_words = []
+
+    def store_letters(self,choice):
+        self.guess_words.append(choice)
 
     def refresh_attempts(self, found):
         """This method refresh the ramaining 

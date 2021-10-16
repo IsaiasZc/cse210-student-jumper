@@ -41,8 +41,10 @@ class Director:
         #Ask for the chosen character  
         choice = self.console.read("Guess a letter [a-z]: ")
 
+        self.guesser.store_letters(choice) # store it in the guesser
+
     def do_updates(self):
-        """Updates the important game information for each round of play. In 
+        """Outputs the important game information for each round of play. In 
         this case calls for the letter chosen, then the letter is compared with the 
         randomly chosen word that the guesser needs to guess, and then it refreshes the attempts
 
@@ -55,16 +57,10 @@ class Director:
         self.guesser.refresh_attempts(found) # refresh the attempts
 
     def do_outputs(self):
-        """Outputs the end of the game messages.
-        Ends the game in the case of win or loss.
-
-        Args:
-            self (Director): An instance of the Director
-        """
         if self.guesser.keep_playing():
             draw = self.jumper.print_draw(self.guesser.attempts)
             self.console.write(draw)
-            self.console.write("Great guessing, you can try again to see if you have better luck!")
+            self.console.write("Great guess, keep it up!")
             self.console.write(f"The word was {self.jumper.word}")
             self.keep_playing = False
         elif self.jumper.keep_playing():
