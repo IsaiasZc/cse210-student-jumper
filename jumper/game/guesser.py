@@ -11,6 +11,12 @@ class Guesser:
         self.guess_words = []
 
     def store_letters(self,choice):
+        """store all the letters chosen by the
+        guesser
+
+        Args:
+            self(Guesser): an instance of the Gueser.
+        """
         self.guess_words.append(choice)
 
     def refresh_attempts(self, found):
