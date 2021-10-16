@@ -34,4 +34,5 @@ root                    (project root folder)
 
 ## Authors
 ---
-* TODO: Add your names and emails here
+* TODO: Daniel Ašler
+        daniel.asler007@gmail.com
