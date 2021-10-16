@@ -46,7 +46,7 @@ class Director:
         self.guesser.store_letters(choice) # store it in the guesser
 
     def do_updates(self):
-        """Outputs the important game information for each round of play. In 
+        """Updates the important game information for each round of play. In 
         this case calls for the letter chosen, then the letter is compared with the 
         randomly chosen word that the guesser needs to guess, and then it refreshes the attempts
 
@@ -59,7 +59,11 @@ class Director:
         self.guesser.refresh_attempts(found) # refresh the attempts
 
     def do_outputs(self):
-        """
+        """Outputs the messages at the end of the game.
+        Ends the game for the guessor.
+
+        Args:
+            self (Director): an instance of the director
         """
         if self.guesser.keep_playing():
             draw = self.jumper.print_draw(self.guesser.attempts)
