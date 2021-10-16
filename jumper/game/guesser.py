@@ -15,3 +15,6 @@ class Guesser:
         if not found:
             self.attempts -= 1
 
+    def keep_playing(self):
+        return self.attempts <= 0
+

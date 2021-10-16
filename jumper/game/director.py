@@ -1,6 +1,6 @@
 from game.jumper import Jumper
-from guesser import Guesser
-from console import Console
+from game.guesser import Guesser
+from game.console import Console
 
 class Director:
     
@@ -57,5 +57,7 @@ class Director:
         self.guesser.refresh_attempts(found) # refresh the attempts
 
     def do_outputs(self):
-        pass
+        if self.guesser.keep_playing():
+            pass
+
 
