@@ -4,8 +4,9 @@ import random
 class Jumper:
   
     def __init__(self):
-
-        self.word = self.read_words("words.csv")
+        self.words = self.read_words()
+        self.word = random.choice(self.words)
+        self.word = self.word[0]
         self.spaces = ["_"] * len(self.word) # We well have the same underscores "_"than characters in the word
         self.jumper = ["""
 
@@ -66,15 +67,15 @@ class Jumper:
         # It's necessary to define how the attempts will be subtracted
         return self.jumper[attempts] # here we will print the respective figure as attemps the guesser has
 
-    def read_words(self, filename):
+    def read_words(self):
       """This method read through the csv
       file to create a list to store the words.
       """
 
-      # empty dictionary that will store the filename data
+      # empty list that will store the filename data
       words = []
 
-      with open(filename, "rt") as csv_file:
+      with open("jumper\game\words.csv", "r") as csv_file:
 
           # Use the csv.reader to go through the file
           reader = csv.reader(csv_file)
@@ -82,7 +83,7 @@ class Jumper:
               # create a key for each line
           for word in reader:
 
-              # create a list that will be the item for the key
+              # create a list
               words.append(word)
 
-          return words # Return the dictionary
+          return words # Return the list
