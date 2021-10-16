@@ -41,8 +41,6 @@ class Director:
         #Ask for the chosen character  
         choice = self.console.read("Guess a letter [a-z]: ")
 
-        self.guesser.store_letters(choice) # store it in the guesser
-
     def do_updates(self):
         """Updates the important game information for each round of play. In 
         this case calls for the letter chosen, then the letter is compared with the 
