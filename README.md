@@ -34,4 +34,8 @@ root                    (project root folder)
 
 ## Authors
 ---
-* TODO: Add your names and emails here
+* TODO: Daniel Ašler
+        daniel.asler007@gmail.com
+
+        Luis Fernando Portugal
+        falconbladex1@gmail.com
