@@ -58,6 +58,16 @@ class Director:
 
     def do_outputs(self):
         if self.guesser.keep_playing():
-            pass
+            draw = self.jumper.print_draw(self.guesser.attempts)
+            self.console.write(draw)
+            self.console.write("Great guess, keep it up!")
+            self.console.write(f"The word was {self.jumper.word}")
+            self.keep_playing = False
+        elif self.jumper.keep_playing():
+            self.console.write("You win bro!")
+            self.keep_playing = False
+
+            
+        
 
 

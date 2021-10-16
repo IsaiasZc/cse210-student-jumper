@@ -87,3 +87,10 @@ class Jumper:
               words.append(word)
 
           return words # Return the list
+
+    def keep_playing(self):
+      chosen = ""
+      for i in self.spaces:
+        chosen += i
+      
+      return chosen == self.word
