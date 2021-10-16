@@ -33,9 +33,13 @@ root                    (project root folder)
 * Python 3.8.0
 
 ## Authors
----
-* TODO: Daniel Ašler
-        daniel.asler007@gmail.com
+    Luis Fernando Portugal Quispe
+    falconbladex1@gmail.com
 
-        Luis Fernando Portugal
-        falconbladex1@gmail.com
+    Daniel Ašler
+    daniel.asler007@gmail.com
+    Slovenia
+
+    Isaias Zuñiga
+    zun21003@byui.edu
+
