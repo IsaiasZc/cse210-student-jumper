@@ -36,3 +36,6 @@ root                    (project root folder)
 ---
 * TODO: Daniel Ašler
         daniel.asler007@gmail.com
+
+        Luis Fernando Portugal
+        falconbladex1@gmail.com
