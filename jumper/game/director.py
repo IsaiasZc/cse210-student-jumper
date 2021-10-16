@@ -1,4 +1,4 @@
-from jumper import Jumper
+from game.jumper import Jumper
 from guesser import Guesser
 from console import Console
 
