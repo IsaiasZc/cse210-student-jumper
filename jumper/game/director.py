@@ -5,7 +5,9 @@ from game.console import Console
 class Director:
     
     def __init__(self):
-        """The constructor."""
+        """The class constructor. Declares and initializes instance attributes.
+        Args:
+            self (Hider): An instances of Hider."""
         self.keep_playing = True
         self.jumper = Jumper()
         self.console = Console()
@@ -57,6 +59,8 @@ class Director:
         self.guesser.refresh_attempts(found) # refresh the attempts
 
     def do_outputs(self):
+        """
+        """
         if self.guesser.keep_playing():
             draw = self.jumper.print_draw(self.guesser.attempts)
             self.console.write(draw)
