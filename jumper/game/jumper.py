@@ -1,7 +1,7 @@
 import random
 
 class Jumper:
-
+  
     def __init__(self):
 
         self.word = "perro"
