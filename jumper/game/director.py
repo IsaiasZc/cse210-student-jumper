@@ -23,6 +23,14 @@ class Director:
             self.do_outputs()
     
     def get_inputs(self):
+        """Prints the blank spaces for the word,
+        draws the jumper with his parashute,
+        prits the prompt to "Guess the letter from A to Z
+        and then stores it in the guesser
+
+        Args:
+            self (Director): an instance of Director
+        """
         # First we write the blank spaces from the Jumper
         self.console.write_word(self.jumper.spaces)
 
@@ -36,6 +44,13 @@ class Director:
         self.guesser.store_letters(choice) # store it in the guesser
 
     def do_updates(self):
+        """Outputs the important game information for each round of play. In 
+        this case calls for the letter chosen, then the letter is compared with the 
+        randomly chosen word that the guesser needs to guess, and then it refreshes the attempts
+
+        Args:
+            self (Director): An instance of Director.
+        """
         # first call the last letter chosen by the guesser
         letter = self.guesser.guess_words[-1]
         found = self.jumper.letter_in_word(letter) # then, send the letter to be compare with the jumper word
